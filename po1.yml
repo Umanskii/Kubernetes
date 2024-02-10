@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: postgres-pod
+spec:
+  containers:
+  - name: postgres
+    image: postgres:latest
+    env:
+      - name: POSTGRES_USER
+        value: "tentek"
+      - name: POSTGRES_PASSWORD
+        value: "tentek"
+
+
+
+
+
+

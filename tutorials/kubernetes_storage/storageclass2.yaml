@@ -1,0 +1,12 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: gp3-fast
+provisioner: kubernetes.io/aws-ebs
+parameters:
+  type: gp3
+  fsType: ext4
+  iops: "3000" # Default is 3000 IOPS, adjust as needed
+  throughput: "125" # Default is 125 MiB/s, adjust as needed
+allowVolumeExpansion: true
+volumeBindingMode: WaitForFirstConsumer
